@@ -8,16 +8,14 @@ data = readData("facebook_combined_short.txt", " ", n)
 # n = Network([str(x) for x in [ 1,2,3,4,5,6,7,8,9]], 2, 0)
 # n.addEdge("2", "8")
 
-# n.nodes.append(500)
 g = n.toIGraph()
 
 print n.neighbours
 print "nodes:", len(n.nodes)
 print "edges:", len([x for k in n.neighbours for x in n.neighbours[k]])
 
-# print g
 print g.path_length_hist()
-# betweenness = zip(n.nodes, g.betweenness())
+# betweenness = g.betweenness()
 print g.components()
 # print g.edge_betweenness()
 

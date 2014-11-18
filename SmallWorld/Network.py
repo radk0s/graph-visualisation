@@ -2,12 +2,6 @@ from igraph import *
 import random
 
 class Network(object):
-	radius = 10
-
-	@staticmethod
-	def setRadius(r):
-		Network.radius = r
-
 	def __init__(self, nodes = set(), edgeAmount = 0, p = 0):
 		self.nodes = nodes
 		if edgeAmount > 0 and edgeAmount >= len(nodes):
