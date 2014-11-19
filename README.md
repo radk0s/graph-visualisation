@@ -1,5 +1,8 @@
 graph-visualisation
 ===================
+
+Presentation: https://slides.com/radoslawchamot/deck--4
+
 ## iGraph
 ###Windows installation:
 from http://www.lfd.uci.edu/~gohlke/pythonlibs/ download and install:
