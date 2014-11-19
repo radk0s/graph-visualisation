@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 
 n = Network()
 data = readData("facebook_combined_short.txt", " ", n)
-g = n.toIGraph()
+g = n.toIGraph(directed = False)
 
 visual_style = {}
 layout = g.layout("circle")
 
 visual_style["layout"] = layout
-visual_style["bbox"] = (6400, 3600)
+visual_style["bbox"] = (12800, 7200)
 
 print "plotting evil"
 plot(g, **visual_style)

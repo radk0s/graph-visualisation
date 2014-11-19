@@ -55,8 +55,8 @@ class Network(object):
 		if n2 not in self.nodes:
 			self.nodes.add(n2)
 			self.neighbours[n2] = set()
-		if self.hasEdge(n1, n2):
-			raise Exception("Already has edge " + str((n1, n2)))
+		# if self.hasEdge(n1, n2):
+		# 	raise Exception("Already has edge " + str((n1, n2)))
 		self.neighbours[n1].add(n2)
 		self.neighbours[n2].add(n1)
 
@@ -84,8 +84,8 @@ class Network(object):
 	def getAveragePathLength(self):
 		return sum([self.getAveragePathLengthFromNode(n) for n in self.nodes]) / float(len(self.nodes))
 
-	def toIGraph(self):
-		g = Graph()
+	def toIGraph(self, directed = False):
+		g = Graph(directed=directed)
 		vertices = [str(x) for x in self.nodes]
 		g.add_vertices(vertices)
 		added = set()
